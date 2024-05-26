@@ -55,7 +55,7 @@ public class Bai01  extends BaseTest {
         if (driver.findElement(By.id("mail")).isEnabled()) {
             System.out.println("element is isEnabled");
         } else {
-            System.out.println("element isnt isEnabled");
+            System.out.println("element isnt isEnabled"5BHBH89);
         }
         Assert.assertTrue(driver.findElement(By.id("mail")).isEnabled());
         //Check disable:
