@@ -66,13 +66,8 @@ public class Bai01  extends BaseTest {
         }
         Assert.assertFalse(driver.findElement(By.id("disable_password")).isEnabled());
         //is selected:
-        driver.findElement(By.id(("under_18"))).click();
-        if (driver.findElement(By.id("under_18")).isSelected()) {
-            System.out.println("element is isSelected");
-        } else {
-            System.out.println("element isnt isSelected");
-        }
-        Assert.assertTrue(driver.findElement(By.id("under_18")).isSelected());
+    SDFHJDSFHJFFDFSK
+            ÁDJDFHSDJFDSFJ
     }
 
     public void sleepInSecond(long timeInSecond) {
