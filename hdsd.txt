@@ -1,5 +1,15 @@
-nnfbehrtgfncnxvrgbjwfjdfnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-4
-jdfnsjnfjef
+sakfjernjfnjdfg
+jdfnsjnfjeor, command-line -p option for dotnet build command.
 
-fjnrfjngrjfnfjnvfmvn
+          > dotnet build -p:WebDriverPlatform=mac64
+          The specifying "WebDriverPlatform" MSBuild property is the highest priority method to control which platform version of the chromedriver will be copied.
+
+          If you run the following command on Windows OS,
+          
+          > dotnet build -r:ubuntu.18.04-x64 -p:WebDriverPlatform=mac64
+          The driver file of macOS x64 version will be copied to the output folder.
+
+          How to include the driver file into published files?
+          "chromedriver(.exe)" isn't included in published files on default configuration. This behavior is by design.
+
+          If you want to include "chromedriver(.exe)" into published files, please define _PUBLISH_CHROMEDRIVER compilation
