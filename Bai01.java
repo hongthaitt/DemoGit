@@ -25,14 +25,12 @@ public class Bai01  extends BaseTest {
 
     @Test
     public void test01() {
-        driver.get("https://automationfc.github.io/basic-form/index.html");
-        sleepInSecond(3);
-        //check isDisplay mail:
-        if (driver.findElement(By.id("mail")).isDisplayed()) {
-            System.out.println("element is displayed");
-        } else {
-            System.out.println("element isnt displayed");
-        }
+        //Go to url:
+        driver.get("http://live.techpanda.org/");
+        driver.findElement(By.xpath("//span[@class='label'][text()='Account']")).click();
+        driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']")).click();
+        String curentUrl = driver.getCurrentUrl();
+        System.out.println("current url: " + curentUrl);
         Assert.assertEquals(curentUrl, "http://live.techpanda.org/index.php/customer/account/login/");
         //Click on create account:
         driver.findElement(By.xpath("//a[@title='Create an Account']")).click();
